@@ -1,0 +1,27 @@
+package net.raphimc.immediatelyfast.feature.core;
+
+import net.minecraft.client.render.BufferBuilder;
+import net.minecraft.client.render.RenderLayer;
+
+import java.util.Map;
+
+public class BatchableImmediate extends ImmediateAdapter {
+
+    public BatchableImmediate() {
+    }
+
+    public BatchableImmediate(Map<RenderLayer, BufferBuilder> layerBuffers) {
+        super(layerBuffers);
+    }
+
+    @Override
+    protected void drawLayer(RenderLayer layer) {
+        for (BufferBuilder bufferBuilder : this.getBufferBuilder(layer)) {
+            if (bufferBuilder != null && bufferBuilder.isBuilding()) {
+                layer.draw(bufferBuilder, 0, 0, 0);
+            }
+        }
+    }
+
+}
+

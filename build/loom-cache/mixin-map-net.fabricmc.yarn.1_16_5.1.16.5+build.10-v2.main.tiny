@@ -1,0 +1,9 @@
+v1	named	intermediary
+FIELD	net/raphimc/immediatelyfast/injection/mixins/core/MixinBufferBuilder	Ljava/nio/ByteBuffer;	buffer	field_1555
+FIELD	net/raphimc/immediatelyfast/injection/mixins/core/MixinTextureManager	Ljava/util/Map;	textures	field_5286
+FIELD	net/raphimc/immediatelyfast/injection/mixins/fast_text_lookup/MixinFontManager	Ljava/util/Map;	fontStorages	field_2259
+FIELD	net/raphimc/immediatelyfast/injection/mixins/fast_text_lookup/MixinFontManager	Ljava/util/Map;	idOverrides	field_24256
+FIELD	net/raphimc/immediatelyfast/injection/mixins/map_atlas_generation/MixinMapRendererMapTexture	Lnet/minecraft/item/map/MapState;	mapState	field_2046
+FIELD	net/raphimc/immediatelyfast/injection/mixins/map_atlas_generation/MixinMapRendererMapTexture	Lnet/minecraft/client/texture/NativeImageBackedTexture;	texture	field_2048
+METHOD	net/raphimc/immediatelyfast/injection/mixins/core/MixinVertexConsumerProvider	(Ljava/util/Map;Lnet/minecraft/client/render/BufferBuilder;)Lnet/minecraft/client/render/VertexConsumerProvider$Immediate;	immediate	method_22992
+METHOD	net/raphimc/immediatelyfast/injection/mixins/fast_text_lookup/MixinFontManager	(Lnet/minecraft/util/Identifier;)Lnet/minecraft/client/font/FontStorage;	method_27542	method_27542

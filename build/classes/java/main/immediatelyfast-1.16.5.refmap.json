@@ -1,0 +1,130 @@
+{
+  "mappings": {
+    "net/raphimc/immediatelyfast/injection/mixins/avoid_redundant_framebuffer_switching/MixinGlStateManager": {
+      "bindFramebuffer": "Lnet/minecraft/class_4493;method_22042(II)V",
+      "viewport": "Lnet/minecraft/class_4493;method_22025(IIII)V"
+    },
+    "net/raphimc/immediatelyfast/injection/mixins/core/MixinDebugHud": {
+      "getLeftText": "Lnet/minecraft/class_340;method_1835()Ljava/util/List;"
+    },
+    "net/raphimc/immediatelyfast/injection/mixins/core/MixinRenderSystem": {
+      "flipFrame": "Lcom/mojang/blaze3d/systems/RenderSystem;flipFrame(J)V",
+      "initRenderer": "Lcom/mojang/blaze3d/systems/RenderSystem;initRenderer(IZ)V"
+    },
+    "net/raphimc/immediatelyfast/injection/mixins/core/MixinTextureManager": {
+      "destroyTexture": "Lnet/minecraft/class_1060;method_4615(Lnet/minecraft/class_2960;)V"
+    },
+    "net/raphimc/immediatelyfast/injection/mixins/fast_text_lookup/MixinFontManager": {
+      "Lnet/minecraft/client/font/TextRenderer;<init>(Ljava/util/function/Function;)V": "Lnet/minecraft/class_327;<init>(Ljava/util/function/Function;)V",
+      "createTextRenderer": "Lnet/minecraft/class_378;method_27539()Lnet/minecraft/class_327;",
+      "setIdOverrides": "Lnet/minecraft/class_378;method_27541(Ljava/util/Map;)V"
+    },
+    "net/raphimc/immediatelyfast/injection/mixins/fast_text_lookup/MixinTextRendererDrawer": {
+      "Lnet/minecraft/client/font/TextRenderer;method_27519(Lnet/minecraft/client/font/TextRenderer;Lnet/minecraft/util/Identifier;)Lnet/minecraft/client/font/FontStorage;": "Lnet/minecraft/class_327;method_27519(Lnet/minecraft/class_327;Lnet/minecraft/class_2960;)Lnet/minecraft/class_377;",
+      "Lnet/minecraft/client/render/VertexConsumerProvider;getBuffer(Lnet/minecraft/client/render/RenderLayer;)Lnet/minecraft/client/render/VertexConsumer;": "Lnet/minecraft/class_4597;getBuffer(Lnet/minecraft/class_1921;)Lnet/minecraft/class_4588;",
+      "accept": "Lnet/minecraft/class_327$class_5232;accept(ILnet/minecraft/class_2583;I)Z",
+      "net.minecraft.client.font.TextRenderer$Drawer": "net/minecraft/class_327$class_5232"
+    },
+    "net/raphimc/immediatelyfast/injection/mixins/fast_text_lookup/TextRendererAccess": {
+      "getFontStorage": "method_27526(Lnet/minecraft/class_2960;)Lnet/minecraft/class_377;"
+    },
+    "net/raphimc/immediatelyfast/injection/mixins/hud_batching/MixinDrawableHelper": {
+      "fill(Lnet/minecraft/util/math/Matrix4f;IIIII)V": "Lnet/minecraft/class_332;method_25299(Lnet/minecraft/class_1159;IIIII)V"
+    },
+    "net/raphimc/immediatelyfast/injection/mixins/hud_batching/MixinInGameHud": {
+      "render": "Lnet/minecraft/class_329;method_1753(Lnet/minecraft/class_4587;F)V"
+    },
+    "net/raphimc/immediatelyfast/injection/mixins/hud_batching/MixinTextRenderer": {
+      "Lnet/minecraft/client/render/VertexConsumerProvider$Immediate;draw()V": "Lnet/minecraft/class_4597$class_4598;method_22993()V",
+      "Lnet/minecraft/client/render/VertexConsumerProvider;immediate(Lnet/minecraft/client/render/BufferBuilder;)Lnet/minecraft/client/render/VertexConsumerProvider$Immediate;": "Lnet/minecraft/class_4597;method_22991(Lnet/minecraft/class_287;)Lnet/minecraft/class_4597$class_4598;",
+      "draw(Ljava/lang/String;FFILnet/minecraft/util/math/Matrix4f;ZZ)I": "Lnet/minecraft/class_327;method_27520(Ljava/lang/String;FFILnet/minecraft/class_1159;ZZ)I",
+      "draw(Lnet/minecraft/text/OrderedText;FFILnet/minecraft/util/math/Matrix4f;Z)I": "Lnet/minecraft/class_327;method_22941(Lnet/minecraft/class_5481;FFILnet/minecraft/class_1159;Z)I"
+    },
+    "net/raphimc/immediatelyfast/injection/mixins/map_atlas_generation/MixinMapRenderer": {
+      "clearStateTextures": "Lnet/minecraft/class_330;method_1771()V",
+      "getMapTexture": "Lnet/minecraft/class_330;method_1774(Lnet/minecraft/class_22;)Lnet/minecraft/class_330$class_331;"
+    },
+    "net/raphimc/immediatelyfast/injection/mixins/map_atlas_generation/MixinMapRendererMapTexture": {
+      "(IIZ)Lnet/minecraft/client/texture/NativeImageBackedTexture;": "(IIZ)Lnet/minecraft/class_1043;",
+      "<init>": "Lnet/minecraft/class_330$class_331;<init>(Lnet/minecraft/class_330;Lnet/minecraft/class_22;)V",
+      "Lnet/minecraft/client/render/VertexConsumer;next()V": "Lnet/minecraft/class_4588;method_1344()V",
+      "Lnet/minecraft/client/render/VertexConsumer;texture(FF)Lnet/minecraft/client/render/VertexConsumer;": "Lnet/minecraft/class_4588;method_22913(FF)Lnet/minecraft/class_4588;",
+      "Lnet/minecraft/client/render/VertexConsumer;vertex(Lnet/minecraft/util/math/Matrix4f;FFF)Lnet/minecraft/client/render/VertexConsumer;": "Lnet/minecraft/class_4588;method_22918(Lnet/minecraft/class_1159;FFF)Lnet/minecraft/class_4588;",
+      "Lnet/minecraft/client/texture/TextureManager;registerDynamicTexture(Ljava/lang/String;Lnet/minecraft/client/texture/NativeImageBackedTexture;)Lnet/minecraft/util/Identifier;": "Lnet/minecraft/class_1060;method_4617(Ljava/lang/String;Lnet/minecraft/class_1043;)Lnet/minecraft/class_2960;",
+      "close": "Lnet/minecraft/class_330$class_331;close()V",
+      "draw": "Lnet/minecraft/class_330$class_331;method_1777(Lnet/minecraft/class_4587;Lnet/minecraft/class_4597;ZI)V",
+      "net.minecraft.client.render.MapRenderer$MapTexture": "net/minecraft/class_330$class_331",
+      "updateTexture": "Lnet/minecraft/class_330$class_331;method_1776()V"
+    },
+    "net/raphimc/immediatelyfast/injection/mixins/skip_text_translucency_sorting/MixinRenderLayer": {
+      "Lnet/minecraft/client/render/RenderLayer;of(Ljava/lang/String;Lnet/minecraft/client/render/VertexFormat;IIZZLnet/minecraft/client/render/RenderLayer$MultiPhaseParameters;)Lnet/minecraft/client/render/RenderLayer$MultiPhase;": "Lnet/minecraft/class_1921;method_24049(Ljava/lang/String;Lnet/minecraft/class_293;IIZZLnet/minecraft/class_1921$class_4688;)Lnet/minecraft/class_1921$class_4687;",
+      "getText": "Lnet/minecraft/class_1921;method_23028(Lnet/minecraft/class_2960;)Lnet/minecraft/class_1921;",
+      "getTextSeeThrough": "Lnet/minecraft/class_1921;method_23030(Lnet/minecraft/class_2960;)Lnet/minecraft/class_1921;"
+    }
+  },
+  "data": {
+    "named:intermediary": {
+      "net/raphimc/immediatelyfast/injection/mixins/avoid_redundant_framebuffer_switching/MixinGlStateManager": {
+        "bindFramebuffer": "Lnet/minecraft/class_4493;method_22042(II)V",
+        "viewport": "Lnet/minecraft/class_4493;method_22025(IIII)V"
+      },
+      "net/raphimc/immediatelyfast/injection/mixins/core/MixinDebugHud": {
+        "getLeftText": "Lnet/minecraft/class_340;method_1835()Ljava/util/List;"
+      },
+      "net/raphimc/immediatelyfast/injection/mixins/core/MixinRenderSystem": {
+        "flipFrame": "Lcom/mojang/blaze3d/systems/RenderSystem;flipFrame(J)V",
+        "initRenderer": "Lcom/mojang/blaze3d/systems/RenderSystem;initRenderer(IZ)V"
+      },
+      "net/raphimc/immediatelyfast/injection/mixins/core/MixinTextureManager": {
+        "destroyTexture": "Lnet/minecraft/class_1060;method_4615(Lnet/minecraft/class_2960;)V"
+      },
+      "net/raphimc/immediatelyfast/injection/mixins/fast_text_lookup/MixinFontManager": {
+        "Lnet/minecraft/client/font/TextRenderer;<init>(Ljava/util/function/Function;)V": "Lnet/minecraft/class_327;<init>(Ljava/util/function/Function;)V",
+        "createTextRenderer": "Lnet/minecraft/class_378;method_27539()Lnet/minecraft/class_327;",
+        "setIdOverrides": "Lnet/minecraft/class_378;method_27541(Ljava/util/Map;)V"
+      },
+      "net/raphimc/immediatelyfast/injection/mixins/fast_text_lookup/MixinTextRendererDrawer": {
+        "Lnet/minecraft/client/font/TextRenderer;method_27519(Lnet/minecraft/client/font/TextRenderer;Lnet/minecraft/util/Identifier;)Lnet/minecraft/client/font/FontStorage;": "Lnet/minecraft/class_327;method_27519(Lnet/minecraft/class_327;Lnet/minecraft/class_2960;)Lnet/minecraft/class_377;",
+        "Lnet/minecraft/client/render/VertexConsumerProvider;getBuffer(Lnet/minecraft/client/render/RenderLayer;)Lnet/minecraft/client/render/VertexConsumer;": "Lnet/minecraft/class_4597;getBuffer(Lnet/minecraft/class_1921;)Lnet/minecraft/class_4588;",
+        "accept": "Lnet/minecraft/class_327$class_5232;accept(ILnet/minecraft/class_2583;I)Z",
+        "net.minecraft.client.font.TextRenderer$Drawer": "net/minecraft/class_327$class_5232"
+      },
+      "net/raphimc/immediatelyfast/injection/mixins/fast_text_lookup/TextRendererAccess": {
+        "getFontStorage": "method_27526(Lnet/minecraft/class_2960;)Lnet/minecraft/class_377;"
+      },
+      "net/raphimc/immediatelyfast/injection/mixins/hud_batching/MixinDrawableHelper": {
+        "fill(Lnet/minecraft/util/math/Matrix4f;IIIII)V": "Lnet/minecraft/class_332;method_25299(Lnet/minecraft/class_1159;IIIII)V"
+      },
+      "net/raphimc/immediatelyfast/injection/mixins/hud_batching/MixinInGameHud": {
+        "render": "Lnet/minecraft/class_329;method_1753(Lnet/minecraft/class_4587;F)V"
+      },
+      "net/raphimc/immediatelyfast/injection/mixins/hud_batching/MixinTextRenderer": {
+        "Lnet/minecraft/client/render/VertexConsumerProvider$Immediate;draw()V": "Lnet/minecraft/class_4597$class_4598;method_22993()V",
+        "Lnet/minecraft/client/render/VertexConsumerProvider;immediate(Lnet/minecraft/client/render/BufferBuilder;)Lnet/minecraft/client/render/VertexConsumerProvider$Immediate;": "Lnet/minecraft/class_4597;method_22991(Lnet/minecraft/class_287;)Lnet/minecraft/class_4597$class_4598;",
+        "draw(Ljava/lang/String;FFILnet/minecraft/util/math/Matrix4f;ZZ)I": "Lnet/minecraft/class_327;method_27520(Ljava/lang/String;FFILnet/minecraft/class_1159;ZZ)I",
+        "draw(Lnet/minecraft/text/OrderedText;FFILnet/minecraft/util/math/Matrix4f;Z)I": "Lnet/minecraft/class_327;method_22941(Lnet/minecraft/class_5481;FFILnet/minecraft/class_1159;Z)I"
+      },
+      "net/raphimc/immediatelyfast/injection/mixins/map_atlas_generation/MixinMapRenderer": {
+        "clearStateTextures": "Lnet/minecraft/class_330;method_1771()V",
+        "getMapTexture": "Lnet/minecraft/class_330;method_1774(Lnet/minecraft/class_22;)Lnet/minecraft/class_330$class_331;"
+      },
+      "net/raphimc/immediatelyfast/injection/mixins/map_atlas_generation/MixinMapRendererMapTexture": {
+        "(IIZ)Lnet/minecraft/client/texture/NativeImageBackedTexture;": "(IIZ)Lnet/minecraft/class_1043;",
+        "<init>": "Lnet/minecraft/class_330$class_331;<init>(Lnet/minecraft/class_330;Lnet/minecraft/class_22;)V",
+        "Lnet/minecraft/client/render/VertexConsumer;next()V": "Lnet/minecraft/class_4588;method_1344()V",
+        "Lnet/minecraft/client/render/VertexConsumer;texture(FF)Lnet/minecraft/client/render/VertexConsumer;": "Lnet/minecraft/class_4588;method_22913(FF)Lnet/minecraft/class_4588;",
+        "Lnet/minecraft/client/render/VertexConsumer;vertex(Lnet/minecraft/util/math/Matrix4f;FFF)Lnet/minecraft/client/render/VertexConsumer;": "Lnet/minecraft/class_4588;method_22918(Lnet/minecraft/class_1159;FFF)Lnet/minecraft/class_4588;",
+        "Lnet/minecraft/client/texture/TextureManager;registerDynamicTexture(Ljava/lang/String;Lnet/minecraft/client/texture/NativeImageBackedTexture;)Lnet/minecraft/util/Identifier;": "Lnet/minecraft/class_1060;method_4617(Ljava/lang/String;Lnet/minecraft/class_1043;)Lnet/minecraft/class_2960;",
+        "close": "Lnet/minecraft/class_330$class_331;close()V",
+        "draw": "Lnet/minecraft/class_330$class_331;method_1777(Lnet/minecraft/class_4587;Lnet/minecraft/class_4597;ZI)V",
+        "net.minecraft.client.render.MapRenderer$MapTexture": "net/minecraft/class_330$class_331",
+        "updateTexture": "Lnet/minecraft/class_330$class_331;method_1776()V"
+      },
+      "net/raphimc/immediatelyfast/injection/mixins/skip_text_translucency_sorting/MixinRenderLayer": {
+        "Lnet/minecraft/client/render/RenderLayer;of(Ljava/lang/String;Lnet/minecraft/client/render/VertexFormat;IIZZLnet/minecraft/client/render/RenderLayer$MultiPhaseParameters;)Lnet/minecraft/client/render/RenderLayer$MultiPhase;": "Lnet/minecraft/class_1921;method_24049(Ljava/lang/String;Lnet/minecraft/class_293;IIZZLnet/minecraft/class_1921$class_4688;)Lnet/minecraft/class_1921$class_4687;",
+        "getText": "Lnet/minecraft/class_1921;method_23028(Lnet/minecraft/class_2960;)Lnet/minecraft/class_1921;",
+        "getTextSeeThrough": "Lnet/minecraft/class_1921;method_23030(Lnet/minecraft/class_2960;)Lnet/minecraft/class_1921;"
+      }
+    }
+  }
+}

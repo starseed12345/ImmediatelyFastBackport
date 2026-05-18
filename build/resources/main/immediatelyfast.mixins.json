@@ -1,0 +1,32 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "net.raphimc.immediatelyfast.injection.mixins",
+  "compatibilityLevel": "JAVA_8",
+  "plugin": "net.raphimc.immediatelyfast.injection.ImmediatelyFastMixinPlugin",
+  "client": [
+    "avoid_redundant_framebuffer_switching.MixinGlStateManager",
+    "core.MixinBufferBuilder",
+    "core.MixinDebugHud",
+    "core.MixinRenderSystem",
+    "core.MixinTextureManager",
+    "core.MixinVertexConsumerProvider",
+    "disable_error_checking.MixinGL11",
+    "fast_text_lookup.MixinFontManager",
+    "fast_text_lookup.MixinTextRendererDrawer",
+    "fast_text_lookup.TextRendererAccess",
+    "font_atlas_resizing.MixinGlyphAtlasTexture",
+    "hud_batching.MixinDrawableHelper",
+    "hud_batching.MixinInGameHud",
+    "hud_batching.MixinTextRenderer",
+    "map_atlas_generation.MixinMapRenderer",
+    "map_atlas_generation.MixinMapRendererMapTexture",
+    "skip_text_translucency_sorting.MixinRenderLayer"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  }
+}
